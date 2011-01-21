@@ -1,13 +1,25 @@
-# gus
+# Clojure Library for Google URL Shortener API
 
-FIXME: write description
+library for Google URL Shortener API
+
+Make Short URL
+
+Expand Short URL
+
+Analytics
 
 ## Usage
 
-FIXME: write
+(def gus-key "IPUT YOUR API KEY")
+If you dont have one, look at http://code.google.com/intl/ja/apis/urlshortener/v1/authentication.html#key
+
+To Make short URL
+(shortener [URL])
+To expand URL
+(expand [URL])
+To view Analytics
+(Analytics [URL])
 
 ## License
 
-Copyright (C) 2010 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+Copyright (C) 2011 watura
