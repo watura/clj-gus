@@ -1,12 +1,9 @@
 # Clojure Library for Google URL Shortener API
 
 library for Google URL Shortener API
-
-Make Short URL
-
-Expand Short URL
-
-Analytics
+- Make Short URL
+- Expand Short URL
+- Analytics
 
 ## Usage
 
@@ -14,11 +11,11 @@ Analytics
 If you dont have one, look at http://code.google.com/intl/ja/apis/urlshortener/v1/authentication.html#key
 
 To Make short URL
-(shortener [URL])
+  (shortener [URL])
 To expand URL
-(expand [URL])
+  (expand [URL])
 To view Analytics
-(Analytics [URL])
+  (Analytics [URL])
 
 ## License
 
