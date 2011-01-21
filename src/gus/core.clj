@@ -3,7 +3,8 @@
 (require ['clojure.contrib.json :as 'json ])
 
 (def gus-url "https://www.googleapis.com/urlshortener/v1/url?key=")
-(def gus-key "INPUT YOUR KEY")
+(defn  gus-key [key] 
+	(str key))
 (defn shortener [url]
   (json/read-json (agent/string (agent/http-agent
 				 (str gus-url gus-key)
