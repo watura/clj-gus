@@ -1,4 +1,4 @@
-(defproject clj-gus "0.0.1-SNAPSHOT"
+(defproject clj-gus "0.0.2-SNAPSHOT"
   :description "Library for Google URL Shortener"
   :url "https://github.com/watura/clj-gus"
   :dependencies [[org.clojure/clojure "1.2.0"]

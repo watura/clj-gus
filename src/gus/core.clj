@@ -3,18 +3,16 @@
 (require ['clojure.contrib.json :as 'json ])
 
 (def gus-url "https://www.googleapis.com/urlshortener/v1/url?key=")
-(defn  gus-key [key] 
-	(str key))
-(defn shortener [url]
+(defn shortener [url key]
   (json/read-json (agent/string (agent/http-agent
-				 (str gus-url gus-key)
+				 (str gus-url key)
 				 :method "POST"
 				 :body (str "{\"longUrl\":\"" url "\"}" )
 				 :headers {"Content-Type" "application/json"}))))
-(defn expand [url]
+(defn expand [url key]
   (json/read-json (agent/string (agent/http-agent
-				 (str gus-url gus-key "&shortUrl=" url)))))
-(defn analytics [url]
+				 (str gus-url key "&shortUrl=" url)))))
+(defn analytics [url key]
     (json/read-json (agent/string (agent/http-agent
-				   (str gus-url gus-key "&projection=FULL&shortUrl=" url)))))
+				   (str gus-url key "&projection=FULL&shortUrl=" url)))))
 

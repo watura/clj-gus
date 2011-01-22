@@ -7,15 +7,18 @@ library for Google URL Shortener API
 
 ## Usage
 
-(def gus-key "IPUT YOUR API KEY")
-If you dont have one, look at http://code.google.com/intl/ja/apis/urlshortener/v1/authentication.html#key
+(def key "IPUT YOUR API KEY")
+If you dont have one, get it at http://code.google.com/intl/ja/apis/urlshortener/v1/authentication.html#key
+
+require gus.core
+(require ['gus.core])
 
 To Make short URL
-  (shortener [URL])
+  (shortener [URL key])
 To expand URL
-  (expand [URL])
+  (expand [URL key])
 To view Analytics
-  (Analytics [URL])
+  (Analytics [URL key])
 
 ## License
 
